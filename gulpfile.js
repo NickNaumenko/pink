@@ -89,12 +89,6 @@ gulp.task("js", () => {
 
 gulp.task("sprite", () => {
   return gulp.src("img/**/{icon-*.svg,logo-*svg}")
-    .pipe(cheerio({
-      run: function ($) {
-        $('[fill]').removeAttr('fill');
-      },
-        parserOptions: { xmlMode: true }
-      }))
     .pipe(svgstore({
       inlineSvg: true
     }))

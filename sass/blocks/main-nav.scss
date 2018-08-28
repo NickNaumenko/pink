@@ -1,0 +1,36 @@
+.main-nav {
+  font-size: 18px;
+  line-height: 32px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.main-nav__list {
+  @include list-style-reset;
+}
+
+.main-nav__wrapper {
+  padding: 0;
+}
+
+.main-nav__logo-wrapper {
+  height: 66px;
+
+  background-color: rgba(#000000, 0.3);
+}
+
+.main-nav__link {
+  display: inline-block;
+  width: 100%;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  text-align: center;
+  color: #ffffff;
+
+  border-top: 1px solid rgba(#ffffff, 0.15);
+  border-bottom: 1px solid #000000;
+  background-color: #283645;
+}

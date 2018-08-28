@@ -2,52 +2,78 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Pink</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="page-header">
     <nav class="main-nav">
-      <button class="main-nav__button"></button>
-      <a class="main-nav__logo-link" href="#">
-        <img class="main-nav__logo" src="" alt="">
-      </a>
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="">Фотографии</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="">Конкурс</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="">HTML ACADEMY</a>
-        </li>
-      </ul>
+      <div class="main-nav__wrapper container">
+        <div class="main-nav__logo-wrapper">
+          <a class="main-nav__logo-link" href="#">
+            <img class="main-nav__logo" src="" alt="">
+          </a>
+          <button class="main-nav__button"></button>
+        </div>
+        <!-- <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="">Фотографии</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="">Конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="">HTML ACADEMY</a>
+          </li>
+        </ul> -->
+      </div>
     </nav>
     <section class="store">
-      <h2 class="visually-hidden">Скачать приложение</h2>
-      <p class="store__intro">
-        Взгляните на жизнь иначе!
-      </p>
-      <a class="store__download button" href="">
-        Скачать приложение
-      </a>
-      <ul class="store__list">
-        <li class="store__item">
-          <a class="store__link store__link--mac" href="">Mac</a>
-        </li>
-        <li class="store__item">
-          <a class="store__link store__link--android" href="">Android</a>
-        </li>
-        <li class="store__item">
-          <a class="store__link store__link--windows" href="">Windows</a>
-        </li>
-      </ul>
-      <p class="store__description">
-        Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-      </p>
+      <div class="store__wrapper">
+        <h2 class="visually-hidden">Скачать приложение</h2>
+        <p class="store__intro">
+          Взгляните на жизнь иначе!
+        </p>
+        <a class="store__download button" href="">
+          Скачать приложение
+        </a>
+        <ul class="store__list">
+          <li class="store__item">
+            <a class="store__link" href="">
+              <span class="visually-hidden">Apple</span>
+              <svg class="store__link-icon" width="47" height="56">
+                <use xlink:href="#logo-apple"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="store__item">
+            <a class="store__link" href="">
+              <span class="visually-hidden">Android</span>
+              <svg class="store__link-icon" width="43" height="47">
+                <use xlink:href="#logo-android"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="store__item">
+            <a class="store__link" href="">
+              <span class="visually-hidden">Windows</span>
+              <svg class="store__link-icon" width="44" height="41">
+                <use xlink:href="#logo-microsoft"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p class="store__description">
+          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+        </p>
+      </div>
     </section>
   </header>
 
