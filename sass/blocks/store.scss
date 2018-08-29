@@ -1,9 +1,8 @@
-.store {
-  color: #ffffff;
+.store__wrapper {
   background-color: #1d2631;
 }
 
-.store__wrapper {
+.store {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,6 +10,8 @@
   margin: 0 auto;
   padding-top: 28px;
   padding-bottom: 30px;
+
+  color: #ffffff;
 }
 
 .store__intro {
@@ -46,12 +47,13 @@
 }
 
 @media (min-width: $tablet-width) {
-  .store {
+  .store__wrapper {
     background-color: transparent;
   }
 
-  .store__wrapper {
+  .store {
     width: 300px;
+    margin: 0;
   }
 
   .store__intro {
