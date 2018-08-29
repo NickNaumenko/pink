@@ -11,6 +11,21 @@
   }
 }
 
+.features__slogan {
+  margin-top: 0;
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+
+  span {
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+}
+
 .features__list {
   @include list-style-reset;
 
@@ -46,6 +61,22 @@
 }
 
 @media (min-width: $tablet-width) {
+  .features__slogan {
+    padding-top: 55px;
+    padding-bottom: 40px;
+
+    font-size: 40px;
+    line-height: 48px;
+
+    span {
+      margin: 0;
+    }
+  }
+
+  .features__slogan-break {
+    display: none;
+  }
+
   .features__list {
     width: 50%;
     min-height: 416px;
@@ -107,6 +138,14 @@
 }
 
 @media (min-width: $desktop-width) {
+  .features__slogan {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    font-size: 50px;
+    line-height: 58px;
+  }
+
   .features__list {
     display: flex;
     justify-content: space-between;
