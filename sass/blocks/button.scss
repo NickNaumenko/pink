@@ -7,9 +7,20 @@
   font: inherit;
   font-size: 18px;
   line-height: 18px;
+  font-weight: 700;
   text-align: center;
   color: #ffffff;
 
   border: 3px solid #ffffff;
   border-radius: 30px;
+
+  &:hover,
+  &:focus {
+    color: $color-pink;
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: rgba($color-pink, 0.3);
+  }
 }
