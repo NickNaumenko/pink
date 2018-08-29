@@ -4,3 +4,13 @@
 
   list-style: none;
 }
+
+@mixin link-hover {
+  &:hover {
+    color: $color-blue;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
