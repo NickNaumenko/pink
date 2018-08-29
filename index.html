@@ -114,25 +114,47 @@
           </p>
         </div>
       </div>
-
-
     </section>
-    <section class="reviews">
+
+    <section class="reviews container">
       <h2 class="visually-hidden">Отзывы</h2>
       <ul class="reviews__list">
         <li class="reviews__item">
           <blockquote class="reviews__blockquote">
+            <p class="reviews__author">
+              Николай Петров<br>
+              <span>25 лет, водитель трамвая</span>
+            </p>
             <p class="reviews__text">
               «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-            </p>
-            <p class="reviews__author">
-              Николай Петров
-              <span>25 лет, водитель трамвая</span>
             </p>
           </blockquote>
         </li>
       </ul>
+      <ul class="reviews__controls">
+        <li class="reviews__controls-item">
+          <input class="visually-hidden" type="radio" name="reviews__radio" id="reviews__radio-1" checked>
+          <label class="reviews__radio" for="reviews__radio-1"></label>
+        </li>
+        <li class="reviews__controls-item">
+          <input class="visually-hidden" type="radio" name="reviews__radio" id="reviews__radio-2">
+          <label class="reviews__radio" for="reviews__radio-2"></label>
+        </li>
+        <li class="reviews__controls-item">
+          <input class="visually-hidden" type="radio" name="reviews__radio" id="reviews__radio-3">
+          <label class="reviews__radio" for="reviews__radio-3"></label>
+        </li>
+      </ul>
+      <div class="reviews__buttons">
+        <button class="reviews__button reviews__button--prev">
+          <span class="visually-hidden">Предыдущий отзыв</span>
+        </button>
+        <button class="reviews__button reviews__button--next">
+          <span class="visually-hidden">Следующий отзыв</span>
+        </button>
+      </div>
     </section>
+
     <section class="price">
       <h2 class="visually-hidden">Тарифы</h2>
       <table class="price__table">
