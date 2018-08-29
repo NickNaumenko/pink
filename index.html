@@ -190,26 +190,29 @@
     </section>
 
     <section class="contacts">
-      <h2 class="visually-hidden">Контакты</h2>
-      <p class="contacts__text">
-        Остались вопросы?<br>
-        Свяжитесь с нами!
-      </p>
-      <address class="contacts__list">
-        <p class="contacts__item">
-          <span class="contacts__title">Звоните:</span><br>
-          +7(812)555-66-66
+      <div class="contacts__wrapper container">
+        <h2 class="visually-hidden">Контакты</h2>
+        <p class="contacts__text">
+          Остались вопросы?<br>
+          Свяжитесь с нами!
         </p>
-        <p class="contacts__item">
-          <span class="contacts__title">Пишите:</span><br>
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </p>
-        <p class="contacts__item">
-          <span class="contacts__title">Приезжайте в гости:</span><br>
-          ул. Большая<br>Конюшенная, 19/8
-        </p>
-      </address>
-      <div class="map"></div>
+        <address class="contacts__list">
+          <p class="contacts__item">
+            <span class="contacts__title">Звоните:</span><br>
+            +7(812)555-66-66
+          </p>
+          <p class="contacts__item">
+            <span class="contacts__title">Пишите:</span><br>
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </p>
+          <p class="contacts__item">
+            <span class="contacts__title">Приезжайте в гости:</span><br>
+            ул. Большая<br>Конюшенная, 19/8
+          </p>
+        </address>
+      </div>
+
+      <div class="contacts__map" id="map"></div>
     </section>
   </main>
 
@@ -238,5 +241,8 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBpk5Rms8viGFtXv7XnfozZ-KG9VIU57I&callback=initMap">
+  </script>
 </body>
 </html>
