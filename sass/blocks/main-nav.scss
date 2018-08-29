@@ -1,36 +1,131 @@
 .main-nav {
-  font-size: 18px;
-  line-height: 32px;
-  text-transform: uppercase;
 
-  color: #ffffff;
-}
-
-.main-nav__list {
-  @include list-style-reset;
 }
 
 .main-nav__wrapper {
   padding: 0;
 }
 
+.main-nav__list {
+  @include list-style-reset;
+
+  display: none;
+}
+
 .main-nav__logo-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
   height: 66px;
+  padding: 22px 20px;
+
 
   background-color: rgba(#000000, 0.3);
 }
 
 .main-nav__link {
   display: inline-block;
+  box-sizing: border-box;
   width: 100%;
 
   padding-top: 15px;
   padding-bottom: 15px;
 
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
   text-align: center;
   color: #ffffff;
 
   border-top: 1px solid rgba(#ffffff, 0.15);
   border-bottom: 1px solid #000000;
-  background-color: #283645;
+  background-color: $color-blue;
+}
+
+
+
+@media (max-width: $mobile-tablet) {
+  .main-nav--shown {
+    .main-nav__list {
+      position: absolute;
+
+      display: block;
+      width: 100%;
+    }
+
+    .main-nav__logo-wrapper {
+      border-bottom: 1px solid #000000;
+      background-color: $color-blue;
+    }
+  }
+
+  .no-js {
+    .main-nav__list {
+      display: block;
+    }
+
+    .main-nav__logo-wrapper {
+      justify-content: center;
+
+      background-color: $color-blue;
+      border-bottom: 1px solid #000000;
+    }
+
+    .main-nav__button {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__logo-wrapper {
+    height: 110px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    background-color: rgba(#000000, 0.3);
+  }
+
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav__logo-wrapper {
+    background-color: transparent;
+  }
+
+  .main-nav__button {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .main-nav__item {
+    margin-right: 80px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .main-nav__link {
+    height: 100%;
+    padding-top: 40px;
+
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+
+    border: none;
+    background-color: transparent;
+
+    outline: 1px solid red;
+  }
 }

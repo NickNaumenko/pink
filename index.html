@@ -11,15 +11,17 @@
     <include src="build/img/sprite.svg"></include>
   </div>
   <header class="page-header">
-    <nav class="main-nav">
+    <nav class="main-nav no-js">
       <div class="main-nav__wrapper container">
         <div class="main-nav__logo-wrapper">
           <a class="main-nav__logo-link" href="#">
-            <img class="main-nav__logo" src="" alt="">
+            <svg class="main-nav__logo" width="75" height="22">
+              <use xlink:href="#logo-pink-white-mobile"></use>
+            </svg>
           </a>
           <button class="main-nav__button"></button>
         </div>
-        <!-- <ul class="main-nav__list">
+        <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="">Главная</a>
           </li>
@@ -30,9 +32,9 @@
             <a class="main-nav__link" href="">Конкурс</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="">HTML ACADEMY</a>
+            <a class="main-nav__link" href="">HTML Academy</a>
           </li>
-        </ul> -->
+        </ul>
       </div>
     </nav>
     <section class="store">
@@ -201,5 +203,7 @@
       <a class="footer__copyright-link" href="">Разработано</a>
     </p>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
