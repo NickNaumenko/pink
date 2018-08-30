@@ -1,0 +1,84 @@
+.logo {
+  width: 75px;
+  height: 22px;
+
+  fill: #ffffff;
+
+  &:hover,
+  &:focus {
+    fill: $color-pink;
+  }
+
+  &:active {
+    fill: #ffffff;
+    opacity: 0.3;
+  }
+}
+
+.logo--footer {
+  fill: $color-blue;
+
+  &:hover,
+  &:focus {
+    fill: $color-pink;
+  }
+
+  &:active {
+    fill: $color-blue;
+    opacity: 0.3;
+  }
+}
+
+#logo-pink-white-tablet {
+  display: none;
+}
+
+#logo-pink-white-desktop {
+  display: none;
+}
+
+#logo-pink-blue-desktop {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .logo {
+    width: 147px;
+    height: 40px;
+  }
+
+  #logo-pink-white-mobile {
+    display: none;
+  }
+
+  #logo-pink-white-tablet {
+    display: block;
+  }
+
+  #logo-pink-white-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  #logo-pink-white-mobile {
+  display: none;
+}
+
+  #logo-pink-white-tablet {
+    display: none;
+  }
+
+  #logo-pink-white-desktop {
+    display: block;
+  }
+
+
+  #logo-pink-blue-mobile {
+    display: none;
+  }
+
+  #logo-pink-blue-desktop {
+    display: block;
+  }
+}
