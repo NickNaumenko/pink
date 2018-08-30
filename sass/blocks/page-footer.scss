@@ -11,9 +11,6 @@
   width: 147px;
   height: 40px;
   margin-bottom: 40px;
-
-
-  outline: 1px solid red;
 }
 
 .page-footer__socials {
@@ -25,9 +22,12 @@
   justify-content: space-between;
   align-items: center;
   width: 129px;
+  padding-left: 18px;
+
   font-size: 14px;
   line-height: 18px;
   vertical-align: middle;
+  color: $color-blue;
 
   fill: $color-pink;
 
@@ -39,12 +39,6 @@
   &:active {
     fill: rgba($color-blue, 0.3);
   }
-
-  outline: 1px solid red;
-}
-
-.page-footer__copyright-image {
-
 }
 
 @media (min-width: $tablet-width) {
