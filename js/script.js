@@ -11,16 +11,16 @@ menuButton.addEventListener("click", function(evt) {
 
 
 function initMap() {
-  var point = {lat: 59.93873, lng: 30.32310};
-  var center = {lat: 59.9387, lng: 30.3230};
+  var point = {lat: 59.9387, lng: 30.3230};
+  var center = {lat: 59.9388, lng: 30.3230};
   var map = new google.maps.Map(document.getElementById("map"), {
     zoom: 17,
     center: center
   });
   var image = {
-    url: "img/icon-map-marker.svg",
-    size: new google.maps.Size(67, 100),
-    anchor: new google.maps.Point(33.5, 100)
+    url: "img/icon-map-marker.png",
+    size: new google.maps.Size(36, 36),
+    anchor: new google.maps.Point(18, 18)
   }
   var marker = new google.maps.Marker({
     position: point,
