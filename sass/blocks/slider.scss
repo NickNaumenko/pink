@@ -1,0 +1,63 @@
+.slider__viewport {
+  position: relative;
+  width: 100%;
+  outline: 10px solid magenta;
+}
+
+.slider__slides {
+  transition: 1s;
+  list-style: none; padding: 0; display: flex;
+}
+
+.slider__item {
+  position: relative;
+  box-sizing: border-box;
+  height: 40px;
+  width: 100%;
+  flex-shrink: 0;
+
+  background-color: green;
+  border: 2px solid orange;
+}
+
+
+// .slider__dots {
+
+// }
+
+.slider__dot {
+  box-sizing: content-box;
+  background-clip: content-box;
+  display: inline-block;
+  margin-right: 13px;
+  padding: 0;
+
+  width: 6px;
+  height: 6px;
+
+  border: 3px solid transparent;
+  border-radius: 50%;
+  background-color: #b5b9be;
+
+  &--current {
+    border-color: #283645;
+    background-color: #ffffff;
+  }
+}
+
+.slider__button {
+  width: 30px;
+  height: 30px;
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.slider__prev {
+  background-color: red;
+}
+
+.slider__next {
+  background-color: blue;
+}

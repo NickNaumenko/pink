@@ -80,6 +80,7 @@ gulp.task("html", () => {
 
 gulp.task("js", () => {
   return gulp.src("js/**/*.js")
+    .pipe(plumber())
     .pipe(minify({
         ignoreFiles: ["picturefill.min.js"]
     }))

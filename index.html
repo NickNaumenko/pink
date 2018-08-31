@@ -159,70 +159,86 @@
 
     <section class="price">
       <h2 class="visually-hidden">Тарифы</h2>
-      <table class="price-table">
-        <caption class="visually-hidden">Тарифы</caption>
-        <thead>
-          <tr>
-            <th class="price-table__hidden-cell" scope="col"></th>
-            <th class="price-table__th" scope="col">
-              База<br><span>1,99 USD</span>
-            </th>
-            <th class="price-table__th price-table__th--hit" scope="col">
-              Стандарт<br><span>1,99 USD</span>
-            </th>
-            <th class="price-table__th" scope="col">
-              Анлим<br><span>1,99 USD</span>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th class="price-table__td" scope="row">Розовый фильтр</th>
-            <td class="price-table__td">
-              <span class="price-table__row-name">Розовый фильтр</span>
-              <span class="price-table__value price-table__value--yes"></span>
-            </td>
-            <td class="price-table__td">
-              <span class="price-table__row-name">Розовый фильтр</span>
-              <span class="price-table__value price-table__value--yes"></span>
-            </td>
-            <td class="price-table__td">
-              <span class="price-table__row-name">Розовый фильтр</span>
-              <span class="price-table__value price-table__value--yes"></span>
-            </td>
-          </tr>
-          <tr>
-            <th class="price-table__td" scope="row">Смайлики</th>
-            <td class="price-table__td">
-              <span class="price-table__row-name">Смайлики</span>
-              <span class="price-table__value"></span>
-            </td>
-            <td class="price-table__td">
-              <span class="price-table__row-name">Смайлики</span>
-              <span class="price-table__value price-table__value--yes"></span>
-            </td>
-            <td class="price-table__td">
-              <span class="price-table__row-name">Смайлики</span>
-              <span class="price-table__value price-table__value--yes"></span>
-            </td>
-          </tr>
-          <tr>
-            <th class="price-table__td" scope="row">Комментарии</th>
-            <td class="price-table__td">
-              <span class="price-table__row-name">Комментарии</span>
-              <span class="price-table__value"></span>
-            </td>
-            <td class="price-table__td">
-              <span class="price-table__row-name">Комментарии</span>
-              <span class="price-table__value"></span>
-            </td>
-            <td class="price-table__td">
-              <span class="price-table__row-name">Комментарии</span>
-              <span class="price-table__value price-table__value--yes"></span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="slider container">
+        <div class="slider__viewport">
+          <!-- <table class="slider__slides price-table">
+            <caption class="visually-hidden">Тарифы</caption>
+            <thead>
+              <tr>
+                <th class="price-table__hidden-cell price-table__td--col-1" scope="col"></th>
+                <th class="price-table__th" scope="col">
+                  База<br><span>1,99 USD</span>
+                </th>
+                <th class="price-table__th price-table__th--hit" scope="col">
+                  Стандарт<br><span>1,99 USD</span>
+                </th>
+                <th class="price-table__th" scope="col">
+                  Анлим<br><span>1,99 USD</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="price-table__td price-table__td--col-1" scope="row">Розовый фильтр</th>
+                <td class="price-table__td">
+                  <span class="price-table__row-name">Розовый фильтр</span>
+                  <span class="price-table__value price-table__value--yes"></span>
+                </td>
+                <td class="price-table__td">
+                  <span class="price-table__row-name">Розовый фильтр</span>
+                  <span class="price-table__value price-table__value--yes"></span>
+                </td>
+                <td class="price-table__td">
+                  <span class="price-table__row-name">Розовый фильтр</span>
+                  <span class="price-table__value price-table__value--yes"></span>
+                </td>
+              </tr>
+              <tr>
+                <th class="price-table__td price-table__td--col-1" scope="row">Смайлики</th>
+                <td class="price-table__td">
+                  <span class="price-table__row-name">Смайлики</span>
+                  <span class="price-table__value"></span>
+                </td>
+                <td class="price-table__td">
+                  <span class="price-table__row-name">Смайлики</span>
+                  <span class="price-table__value price-table__value--yes"></span>
+                </td>
+                <td class="price-table__td">
+                  <span class="price-table__row-name">Смайлики</span>
+                  <span class="price-table__value price-table__value--yes"></span>
+                </td>
+              </tr>
+              <tr>
+                <th class="price-table__td price-table__td--col-1" scope="row">Комментарии</th>
+                <td class="price-table__td">
+                  <span class="price-table__row-name">Комментарии</span>
+                  <span class="price-table__value"></span>
+                </td>
+                <td class="price-table__td">
+                  <span class="price-table__row-name">Комментарии</span>
+                  <span class="price-table__value"></span>
+                </td>
+                <td class="price-table__td">
+                  <span class="price-table__row-name">Комментарии</span>
+                  <span class="price-table__value price-table__value--yes"></span>
+                </td>
+              </tr>
+            </tbody>
+          </table> -->
+          <ul class="slider__slides">
+            <li class="slider__item">0</li>
+            <li class="slider__item">1</li>
+            <li class="slider__item">2</li>
+            <li class="slider__item">3</li>
+            <li class="slider__item">4</li>
+            <li class="slider__item">5</li>
+          </ul>
+        </div>
+        <div class="slider__buttons">
+        </div>
+        <div class="slider__dots"></div>
+      </div>
+
     </section>
 
     <section class="contacts">
@@ -289,6 +305,7 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/slider.js"></script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBpk5Rms8viGFtXv7XnfozZ-KG9VIU57I&callback=initMap">
   </script>
