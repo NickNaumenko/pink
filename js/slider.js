@@ -1,117 +1,121 @@
-function slider(argument) {
-  const slider = document.querySelector(".slider");
-  const viewport = slider.querySelector(".slider__viewport");
-  const slidesFrame = slider.querySelector(".slider__slides");
-  var slidesList = slider.querySelectorAll(".slider__item");
-  const slidesCount = slidesList.length;
-  const dotsContainer = slider.querySelector(".slider__dots");
-  const buttonPrev = slider.querySelector(".slider__prev");
-  const buttonNext = slider.querySelector(".slider__next");
+let config = {
+  sliderSelector: ".slider",
+  startPosition: 1
+};
 
-  let firstPosition = argument.firstPosition || 0;
+function slider(config) {
+  this._sliderSelector = config.sliderSelector;
+  this._slider = document.querySelector(config.sliderSelector);
+  this._viewport = this._slider.querySelector(".slider__viewport");
+  this._frame = this._slider.querySelector(".slider__frame");
+  this._slidesList = this._slider.querySelectorAll(".slider__item");
+  this._dotsContainer = this._slider.querySelector(".slider__dots");
+  this._dotsList = [];
+  this._buttonPrev = this._slider.querySelector(".slider__prev");
+  this._buttonNext = this._slider.querySelector(".slider__next");
 
-  let currentPosition = firstPosition;
-  let newPosition = currentPosition;
+  this.currentPosition = config.startPosition || 0;
+  this.newPosition = this.currentPosition;
+}
 
-  // (function() {
-  //   let stepLength = viewport.offsetWidth;
-  //   let path = (0 - newPosition) * stepLength;
-  //   slidesFrame.style.transform = `translateX(${path}px)`;
-  // })();
+slider.prototype._setStartPosition = function() {
+  let shift = - this._viewport.offsetWidth * this.currentPosition;
+  this._frame.style.left = shift + "px";
+}
+
+slider.prototype._initMove = function() {
+  let path = - this._frame.offsetLeft - this._slidesList[this.newPosition].offsetLeft;
+  this._frame.style.transform = `translateX(${path}px)`;
+}
 
 
-  function moveSlides() {
-    let stepLength = viewport.offsetWidth;
-    let path = (firstPosition - newPosition) * stepLength;
-    slidesFrame.style.transform = `translateX(${path}px)`;
-  }
+slider.prototype._setCurrentDot = function() {
+  this._dotsList[this.currentPosition].classList.remove("slider__dot--current");
+  this._dotsList[this.newPosition].classList.add("slider__dot--current");
+}
 
-  function autoMoving() {
-    let timerId = setTimeout(function() {
-      newPosition = currentPosition >= slidesCount - 1 ? 0 : newPosition + 1;
-      initButton();
+slider.prototype._makeDots = function makeDots(n) {
+  let a = this;
 
-      timerId = setTimeout(autoMoving, 2000);
-    }, 2000);
-  }
+  for (let i = 0; i < n; i++) {
+    let dotButton = document.createElement("button");
+    dotButton.classList.add("slider__dot");
 
-  function makeDots(n) {
-    for (let i = 0; i < n; i++) {
-      let dotButton = document.createElement("button");
-      dotButton.classList.add("slider__dot");
+    this._dotsList.push(dotButton);
 
-      if(i === firstPosition) {
-        dotButton.classList.add("slider__dot--current");
-        currentDot = dotButton;
+    if(i == this.currentPosition) {
+      dotButton.classList.add("slider__dot--current");
+      currentDot = dotButton;
+    }
+
+    dotButton.addEventListener("click", function() {
+      a.newPosition = i;
+
+      if (a._buttonPrev) {
+        a._checkDisabled();
       }
 
-      dotButton.addEventListener("click", function() {
-        newPosition = i;
-        initButton();
-      });
-
-      dotsContainer.appendChild(dotButton);
-    }
-  }
-
-
-  function setCurrentDot() {
-    if (argument.sliderDots == false) {
-      return;
-    }
-
-    let dotsList = slider.querySelectorAll(".slider__dot");
-    dotsList[currentPosition].classList.remove("slider__dot--current");
-    dotsList[newPosition].classList.add("slider__dot--current");
-  }
-
-  function checkDisabled() {
-    if (newPosition === 0) {
-      buttonPrev.setAttribute("disabled", "disabled");
-    } else if (currentPosition === 0 && newPosition !== 0) {
-      buttonPrev.removeAttribute("disabled", "disabled");
-    }
-
-    if (newPosition === slidesCount - 1) {
-      buttonNext.setAttribute("disabled", "disabled");
-    } else if (currentPosition === slidesCount - 1 && newPosition !== slidesCount - 1) {
-      buttonNext.removeAttribute("disabled", "disabled");
-    }
-  }
-
-  function initButton(button) {
-    setCurrentDot();
-    checkDisabled();
-    currentPosition = newPosition;
-    moveSlides();
-  }
-
-
-
-  if (argument.sliderButtons) {
-    buttonPrev.addEventListener("click", function() {
-      newPosition--;
-      initButton();
+      a._setCurrentDot();
+      a.currentPosition = a.newPosition;
+      a._initMove();
     });
 
-    buttonNext.addEventListener("click", function() {
-      newPosition++;
-      initButton();
-    });
+    this._dotsContainer.appendChild(dotButton);
   }
-
-  if (argument.sliderDots) {
-    makeDots(slidesCount);
-  }
-  // autoMoving();
-  checkDisabled();
 }
 
-let sliderConfig = {
-  slider: ".slider",
-  firstPosition: 0,
-  sliderDots: true,
-  sliderButtons: true
+slider.prototype._checkDisabled = function() {
+    if (this.newPosition === 0) {
+      this._buttonPrev.setAttribute("disabled", "disabled");
+    } else if (this.currentPosition === 0 && this.newPosition !== 0) {
+      this._buttonPrev.removeAttribute("disabled", "disabled");
+    }
+
+    if (this.newPosition === this._slidesList.length - 1) {
+      this._buttonNext.setAttribute("disabled", "disabled");
+    } else if (this.currentPosition === this._slidesList.length - 1
+        && this.newPosition !== this._slidesList.length - 1) {
+      this._buttonNext.removeAttribute("disabled", "disabled");
+    }
 }
 
-let slidera = new slider(sliderConfig);
+slider.prototype._initButtons = function() {
+  let a = this;
+
+  this._buttonPrev.addEventListener("click", function() {
+    a.newPosition--;
+
+    if (a._dotsList[0]) {
+      a._setCurrentDot();
+    }
+
+    a._checkDisabled();
+
+    a.currentPosition = a.newPosition;
+    a._initMove();
+  });
+
+  this._buttonNext.addEventListener("click", function() {
+    a.newPosition++;
+
+    if (a._dotsList[0]) {
+      a._setCurrentDot();
+    }
+
+    a._checkDisabled();
+
+    a.currentPosition = a.newPosition;
+    a._initMove();
+  });
+}
+
+
+slider.prototype.init = function() {
+  this._setStartPosition();
+  this._makeDots(this._slidesList.length);
+  this._initButtons();
+}
+
+let newSlider = new slider(config);
+
+newSlider.init();
