@@ -15,6 +15,7 @@ function initMap() {
   var center = {lat: 59.9388, lng: 30.3230};
   var map = new google.maps.Map(document.getElementById("map"), {
     zoom: 17,
+    disableDefaultUI: true,
     center: center
   });
   var image = {
