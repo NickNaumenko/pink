@@ -120,130 +120,127 @@
 
     <section class="reviews container">
       <h2 class="visually-hidden">Отзывы</h2>
-      <ul class="reviews__list">
-        <li class="reviews__item">
-          <blockquote class="reviews__blockquote">
-            <p class="reviews__author">
-              Николай Петров<br>
-              <span>25 лет, водитель трамвая</span>
-            </p>
-            <p class="reviews__text">
-              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-            </p>
-          </blockquote>
-        </li>
-      </ul>
-      <ul class="reviews__controls">
-        <li class="reviews__controls-item">
-          <input class="visually-hidden" type="radio" name="reviews__radio" id="reviews__radio-1" checked>
-          <label class="reviews__radio" for="reviews__radio-1"></label>
-        </li>
-        <li class="reviews__controls-item">
-          <input class="visually-hidden" type="radio" name="reviews__radio" id="reviews__radio-2">
-          <label class="reviews__radio" for="reviews__radio-2"></label>
-        </li>
-        <li class="reviews__controls-item">
-          <input class="visually-hidden" type="radio" name="reviews__radio" id="reviews__radio-3">
-          <label class="reviews__radio" for="reviews__radio-3"></label>
-        </li>
-      </ul>
-      <div class="reviews__buttons">
-        <button class="reviews__button reviews__button--prev">
-          <span class="visually-hidden">Предыдущий отзыв</span>
-        </button>
-        <button class="reviews__button reviews__button--next">
-          <span class="visually-hidden">Следующий отзыв</span>
-        </button>
+      <div class="slider reviews__slider">
+        <div class="slider__viewport reviews__slider-viewport">
+          <div class="slider__frame">
+            <ul class="reviews__list">
+              <li class="reviews__item slider__item">
+                <blockquote class="reviews__blockquote">
+                  <p class="reviews__author">
+                    Николай Петров<br>
+                    <span>25 лет, водитель трамвая</span>
+                  </p>
+                  <p class="reviews__text">
+                    «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                  </p>
+                </blockquote>
+              </li>
+              <li class="reviews__item slider__item">
+                <blockquote class="reviews__blockquote">
+                  <p class="reviews__author">
+                    Николай Петров<br>
+                    <span>25 лет, водитель трамвая</span>
+                  </p>
+                  <p class="reviews__text">
+                    «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                  </p>
+                </blockquote>
+              </li>
+              <li class="reviews__item slider__item">
+                <blockquote class="reviews__blockquote">
+                  <p class="reviews__author">
+                    Николай Петров<br>
+                    <span>25 лет, водитель трамвая</span>
+                  </p>
+                  <p class="reviews__text">
+                    «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                  </p>
+                </blockquote>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="slider__dots reviews__controls"></div>
+        <div class="reviews__buttons">
+          <button class="reviews__button reviews__button--prev slider__prev">
+            <span class="visually-hidden">Предыдущий отзыв</span>
+          </button>
+          <button class="reviews__button reviews__button--next slider__next">
+            <span class="visually-hidden">Следующий отзыв</span>
+          </button>
+        </div>
       </div>
     </section>
 
-    <!-- <section class="price">
+    <section class="price">
       <h2 class="visually-hidden">Тарифы</h2>
-      <div class="slider container">
-        <div class="slider__viewport">
-          <table class="slider__slides price-table">
-            <caption class="visually-hidden">Тарифы</caption>
-            <thead>
-              <tr>
-                <th class="price-table__hidden-cell price-table__td--col-1" scope="col"></th>
-                <th class="price-table__th slider__item" scope="col">
-                  База<br><span>1,99 USD</span>
-                </th>
-                <th class="price-table__th price-table__th--hit slider__item" scope="col">
-                  Стандарт<br><span>1,99 USD</span>
-                </th>
-                <th class="price-table__th slider__item" scope="col">
-                  Анлим<br><span>1,99 USD</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th class="price-table__td price-table__td--col-1" scope="row">Розовый фильтр</th>
-                <td class="price-table__td">
-                  <span class="price-table__row-name">Розовый фильтр</span>
-                  <span class="price-table__value price-table__value--yes"></span>
-                </td>
-                <td class="price-table__td">
-                  <span class="price-table__row-name">Розовый фильтр</span>
-                  <span class="price-table__value price-table__value--yes"></span>
-                </td>
-                <td class="price-table__td">
-                  <span class="price-table__row-name">Розовый фильтр</span>
-                  <span class="price-table__value price-table__value--yes"></span>
-                </td>
-              </tr>
-              <tr>
-                <th class="price-table__td price-table__td--col-1" scope="row">Смайлики</th>
-                <td class="price-table__td">
-                  <span class="price-table__row-name">Смайлики</span>
-                  <span class="price-table__value"></span>
-                </td>
-                <td class="price-table__td">
-                  <span class="price-table__row-name">Смайлики</span>
-                  <span class="price-table__value price-table__value--yes"></span>
-                </td>
-                <td class="price-table__td">
-                  <span class="price-table__row-name">Смайлики</span>
-                  <span class="price-table__value price-table__value--yes"></span>
-                </td>
-              </tr>
-              <tr>
-                <th class="price-table__td price-table__td--col-1" scope="row">Комментарии</th>
-                <td class="price-table__td">
-                  <span class="price-table__row-name">Комментарии</span>
-                  <span class="price-table__value"></span>
-                </td>
-                <td class="price-table__td">
-                  <span class="price-table__row-name">Комментарии</span>
-                  <span class="price-table__value"></span>
-                </td>
-                <td class="price-table__td">
-                  <span class="price-table__row-name">Комментарии</span>
-                  <span class="price-table__value price-table__value--yes"></span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="slider__buttons">
-          <button class="slider__button slider__prev"></button>
-          <button class="slider__button slider__next"></button>
-        </div>
-        <div class="slider__dots"></div>
-      </div>
-    </section> -->
-    <section>
-      <div class="slider">
+      <div class="slider slider--price container">
         <div class="slider__viewport">
           <div class="slider__frame">
-            <ul class="slider__slides-list">
-              <li class="slider__item">0</li>
-              <li class="slider__item">1</li>
-              <li class="slider__item">2</li>
-              <li class="slider__item">3</li>
-              <li class="slider__item">4</li>
-            </ul>
+            <table class="slider__slides price-table">
+              <caption class="visually-hidden">Тарифы</caption>
+              <thead>
+                <tr>
+                  <th class="price-table__hidden-cell price-table__td--col-1" scope="col"></th>
+                  <th class="price-table__th slider__item" scope="col">
+                    База<br><span>1,99 USD</span>
+                  </th>
+                  <th class="price-table__th price-table__th--hit slider__item" scope="col">
+                    Стандарт<br><span>1,99 USD</span>
+                  </th>
+                  <th class="price-table__th slider__item" scope="col">
+                    Анлим<br><span>1,99 USD</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="price-table__td price-table__td--col-1" scope="row">Розовый фильтр</th>
+                  <td class="price-table__td">
+                    <span class="price-table__row-name">Розовый фильтр</span>
+                    <span class="price-table__value price-table__value--yes"></span>
+                  </td>
+                  <td class="price-table__td">
+                    <span class="price-table__row-name">Розовый фильтр</span>
+                    <span class="price-table__value price-table__value--yes"></span>
+                  </td>
+                  <td class="price-table__td">
+                    <span class="price-table__row-name">Розовый фильтр</span>
+                    <span class="price-table__value price-table__value--yes"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="price-table__td price-table__td--col-1" scope="row">Смайлики</th>
+                  <td class="price-table__td">
+                    <span class="price-table__row-name">Смайлики</span>
+                    <span class="price-table__value"></span>
+                  </td>
+                  <td class="price-table__td">
+                    <span class="price-table__row-name">Смайлики</span>
+                    <span class="price-table__value price-table__value--yes"></span>
+                  </td>
+                  <td class="price-table__td">
+                    <span class="price-table__row-name">Смайлики</span>
+                    <span class="price-table__value price-table__value--yes"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="price-table__td price-table__td--col-1" scope="row">Комментарии</th>
+                  <td class="price-table__td">
+                    <span class="price-table__row-name">Комментарии</span>
+                    <span class="price-table__value"></span>
+                  </td>
+                  <td class="price-table__td">
+                    <span class="price-table__row-name">Комментарии</span>
+                    <span class="price-table__value"></span>
+                  </td>
+                  <td class="price-table__td">
+                    <span class="price-table__row-name">Комментарии</span>
+                    <span class="price-table__value price-table__value--yes"></span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
         <div class="slider__buttons">
@@ -253,6 +250,7 @@
         <div class="slider__dots"></div>
       </div>
     </section>
+
 
     <section class="contacts">
       <div class="contacts__wrapper container">
