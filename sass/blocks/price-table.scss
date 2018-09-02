@@ -1,19 +1,6 @@
-.price-table__wrapper {
-  box-sizing: border-box;
-
-  overflow: hidden;
-}
-
-// .price-table__wrapper-inner {
-//   width: 300%;
-//   min-height: 100px;
-
-//   outline: 1px solid magenta;
-// }
-
 .price-table {
-  width: 100%;
   table-layout: fixed;
+  width: 300%;
 
   border-collapse: collapse;
 }
@@ -42,6 +29,7 @@
 
 .price-table__td {
   box-sizing: border-box;
+  width: 100%;
   min-width: 280px;
   padding: 16px 20px;
 
@@ -64,7 +52,6 @@
 
 .price-table__value {
   position: relative;
-
 
   display: inline-block;
   float: right;
@@ -119,13 +106,6 @@
 
 }
 
-@media (max-width: $mobile-only) {
-  .price-table {
-    width: 300%;
-    transform: translateX(-33.33%);
-  }
-}
-
 @media (min-width: $tablet-width) {
   .price-table {
     width: 100%;
@@ -159,6 +139,10 @@
 
   .price-table__value {
     float: none;
+  }
+
+  .price-table__dots {
+    display: none;
   }
 }
 

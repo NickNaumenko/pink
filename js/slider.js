@@ -1,11 +1,5 @@
-let config = {
-  sliderSelector: ".slider",
-  startPosition: 1
-};
-
-function slider(config) {
-  this._sliderSelector = config.sliderSelector;
-  this._slider = document.querySelector(config.sliderSelector);
+function slider(selector) {
+  this._slider = document.querySelector(selector);
   this._viewport = this._slider.querySelector(".slider__viewport");
   this._frame = this._slider.querySelector(".slider__frame");
   this._slidesList = this._slider.querySelectorAll(".slider__item");
@@ -14,11 +8,13 @@ function slider(config) {
   this._buttonPrev = this._slider.querySelector(".slider__prev");
   this._buttonNext = this._slider.querySelector(".slider__next");
 
-  this.currentPosition = config.startPosition || 0;
+  this.currentPosition = 0;
   this.newPosition = this.currentPosition;
 }
 
-slider.prototype._setStartPosition = function() {
+slider.prototype.setStartPosition = function(position) {
+  this.currentPosition = position || 0;
+  this.newPosition = this.currentPosition;
   let shift = - this._viewport.offsetWidth * this.currentPosition;
   this._frame.style.left = shift + "px";
 }
@@ -34,7 +30,8 @@ slider.prototype._setCurrentDot = function() {
   this._dotsList[this.newPosition].classList.add("slider__dot--current");
 }
 
-slider.prototype._makeDots = function makeDots(n) {
+slider.prototype.makeDots = function makeDots(amount) {
+  n = amount || this._slidesList.length;
   let a = this;
 
   for (let i = 0; i < n; i++) {
@@ -79,7 +76,14 @@ slider.prototype._checkDisabled = function() {
     }
 }
 
-slider.prototype._initButtons = function() {
+slider.prototype.initButtons = function(btnPrev, btnNext) {
+  if (arguments.length) {
+    this._buttonPrev = btnPrev;
+    this._buttonPrev = btnPrev;
+  }
+
+  this._checkDisabled();
+
   let a = this;
 
   this._buttonPrev.addEventListener("click", function() {
@@ -110,12 +114,11 @@ slider.prototype._initButtons = function() {
 }
 
 
-slider.prototype.init = function() {
-  this._setStartPosition();
-  this._makeDots(this._slidesList.length);
-  this._initButtons();
-}
+let newSlider = new slider(".reviews__slider");
+newSlider.makeDots();
+newSlider.initButtons();
 
-let newSlider = new slider(config);
 
-newSlider.init();
+let newSlider2 = new slider(".slider--price");
+newSlider2.setStartPosition(1);
+newSlider2.makeDots();

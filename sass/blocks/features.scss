@@ -5,10 +5,6 @@
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-triangle-white.svg");
-  }
 }
 
 .features__slogan {
