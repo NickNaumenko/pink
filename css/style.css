@@ -176,6 +176,61 @@ input[type="radio"].visually-hidden {
     .page-header {
       background-image: url("../img/iphone-hand-desktop%401x.png"), url("../img/bg-back-desktop%402x.jpg"); } }
 
+.logo {
+  width: 75px;
+  height: 22px;
+  fill: #ffffff; }
+  .logo:hover, .logo:focus {
+    fill: #d22856; }
+  .logo:active {
+    fill: #ffffff;
+    opacity: 0.3; }
+
+.logo--footer {
+  width: 147px;
+  height: 40px;
+  fill: #283645; }
+  .logo--footer:hover, .logo--footer:focus {
+    fill: #d22856; }
+  .logo--footer:active {
+    fill: #283645;
+    opacity: 0.3; }
+
+#logo-header-mobile {
+  display: block; }
+
+#logo-header-tablet {
+  display: none; }
+
+#logo-header-desktop {
+  display: none; }
+
+#logo-footer-desktop {
+  display: none; }
+
+@media (min-width: 660px) {
+  .logo {
+    width: 147px;
+    height: 40px; }
+  #logo-header-mobile {
+    display: none; }
+  #logo-header-tablet {
+    display: block; }
+  #logo-header-desktop {
+    display: none; } }
+
+@media (min-width: 960px) {
+  #logo-header-mobile {
+    display: none; }
+  #logo-header-tablet {
+    display: none; }
+  #logo-header-desktop {
+    display: block; }
+  #logo-footer-mobile {
+    display: none; }
+  #logo-footer-desktop {
+    display: block; } }
+
 .main-nav__wrapper {
   padding: 0; }
 
@@ -329,58 +384,6 @@ input[type="radio"].visually-hidden {
       width: 100%;
       height: 2px;
       background-color: #ffffff; } }
-
-.logo {
-  width: 75px;
-  height: 22px;
-  fill: #ffffff; }
-  .logo:hover, .logo:focus {
-    fill: #d22856; }
-  .logo:active {
-    fill: #ffffff;
-    opacity: 0.3; }
-
-.logo--footer {
-  width: 147px;
-  height: 40px;
-  fill: #283645; }
-  .logo--footer:hover, .logo--footer:focus {
-    fill: #d22856; }
-  .logo--footer:active {
-    fill: #283645;
-    opacity: 0.3; }
-
-#logo-pink-white-tablet {
-  display: none; }
-
-#logo-pink-white-desktop {
-  display: none; }
-
-#logo-pink-blue-desktop {
-  display: none; }
-
-@media (min-width: 660px) {
-  .logo {
-    width: 147px;
-    height: 40px; }
-  #logo-pink-white-mobile {
-    display: none; }
-  #logo-pink-white-tablet {
-    display: block; }
-  #logo-pink-white-desktop {
-    display: none; } }
-
-@media (min-width: 960px) {
-  #logo-pink-white-mobile {
-    display: none; }
-  #logo-pink-white-tablet {
-    display: none; }
-  #logo-pink-white-desktop {
-    display: block; }
-  #logo-pink-blue-mobile {
-    display: none; }
-  #logo-pink-blue-desktop {
-    display: block; } }
 
 .store__wrapper {
   background-color: #1d2631; }

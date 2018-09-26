@@ -185,9 +185,15 @@
         <div class="main-nav__logo-wrapper">
           <a class="main-nav__logo-link" href="#">
             <svg class="main-nav__logo logo">
-              <use xlink:href="#logo-pink-white-mobile"></use>
-              <use xlink:href="#logo-pink-white-tablet"></use>
-              <use xlink:href="#logo-pink-white-desktop"></use>
+              <g id="logo-header-mobile">
+                <use xlink:href="#logo-pink-white-mobile"></use>
+              </g>
+              <g id="logo-header-tablet">
+                <use xlink:href="#logo-pink-white-tablet"></use>
+              </g>
+              <g id="logo-header-desktop">
+                <use xlink:href="#logo-pink-white-desktop"></use>
+              </g>
             </svg>
           </a>
           <button class="main-nav__button">
@@ -452,8 +458,12 @@
   <footer class="page-footer container">
     <a class="page-footer__logo-link logo--footer" href="">
       <svg width="147" height="40">
-        <use xlink:href="#logo-pink-blue-mobile"></use>
-        <use xlink:href="#logo-pink-blue-desktop"></use>
+        <g id="logo-footer-mobile">
+          <use xlink:href="#logo-pink-blue-mobile"></use>
+        </g>
+        <g id="logo-footer-desktop">
+          <use xlink:href="#logo-pink-blue-desktop"></use>
+        </g>
       </svg>
     </a>
     <div class="page-footer__socials">
